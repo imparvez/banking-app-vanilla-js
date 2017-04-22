@@ -6,11 +6,14 @@
 </head>
 <body>
 	<div class="customer">
+		<input type="text" placeholder="Search Users" id="filter_users" onkeyup="helper.filterLists()"/>
+	 	<!--<input type="text" onkeyup="myFunction()">-->
 		<div class="addNewCustomer">
 			<span>Add New Customer: </span>
 			<input id="firstName" type="text" placeholder="FirstName">
 			<button onclick="helper.addBankCustomer()" id="addNewCustomerButton">SUBMIT</button>
 		</div>
+		<ul id="lists"></ul>
 	</div>
 	<script src="script.js"></script>
 </body>
