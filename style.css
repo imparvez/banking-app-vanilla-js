@@ -1,0 +1,45 @@
+.container.customer {
+    padding-top: 50px;
+}
+
+.list-group {
+    margin-top: 20px;
+}
+
+.addNewCustomer .input-group {
+    width: 100%;
+}
+
+.addNewCustomer input.form-control {
+    width: 250px !important;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+#lists .fa {
+    margin-right: 10px;
+}
+
+.search-container {
+    width: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-container .form-control {
+    padding-left: 30px;
+}
+
+.fa.fa-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.name, 
+.accountType, 
+.accountBal {
+	display: inline-block;
+	margin: 0 15px;
+	text-transform: capitalize;
+}

@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Banking App</title>
+    <meta charset="UTF-8">
+    <title>Banking App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<div class="customer">
-		<input type="text" placeholder="Search Users" id="filter_users" onkeyup="helper.filterLists()"/>
-	 	<!--<input type="text" onkeyup="myFunction()">-->
-		<div class="addNewCustomer">
-			<span>Add New Customer: </span>
-			<input id="firstName" type="text" placeholder="FirstName">
-			<button onclick="helper.addBankCustomer()" id="addNewCustomerButton">SUBMIT</button>
-		</div>
-		<ul id="lists"></ul>
-	</div>
-	<script src="script.js"></script>
+    <div class="container customer">
+    	<div class="search-container">
+        	<i class="fa fa-search" aria-hidden="true"></i>
+        	<input type="text" class="form-control" placeholder="Search Users" id="filter_users" onkeyup="helper.filterLists()" />
+        </div>
+
+        <div class="addNewCustomer">
+            <h2>Add New Customer: </h2>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Username" id="name">
+                <input type="text" class="form-control" placeholder="Account Type" id="accountType">
+                <input type="text" class="form-control" placeholder="Account Bal" id="accountBal">
+                <button type="button" class="btn btn-primary" onclick="helper.addBankCustomer()" id="addNewCustomerButton">SUBMIT</button>
+            </div>
+            <!-- <input id="firstName" type="text" placeholder="FirstName"> -->
+        </div>
+        
+        <ul id="lists" class="list-group"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
