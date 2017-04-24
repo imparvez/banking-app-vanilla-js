@@ -36,10 +36,16 @@
     left: 10px;
 }
 
-.name, 
-.accountType, 
+.name,
+.accountType,
 .accountBal {
-	display: inline-block;
-	margin: 0 15px;
-	text-transform: capitalize;
+    display: inline-block;
+    margin: 0 15px;
+    text-transform: capitalize;
+}
+
+.list-group-item input {
+    width: 250px;
+    display: inline-block;
+    margin: 0 10px;
 }
