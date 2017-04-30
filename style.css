@@ -49,3 +49,7 @@
     display: inline-block;
     margin: 0 10px;
 }
+
+.glyphicon.glyphicon-remove.pull-right {
+    margin-top: 10px;
+}

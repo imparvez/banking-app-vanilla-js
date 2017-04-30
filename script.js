@@ -13,6 +13,11 @@ var banking = {
 	},
 	renderList:  function(list){
 		var ul = document.getElementById("lists");
+		ul.addEventListener("click", function(e){
+			if (e.target && e.target.matches("span.glyphicon-remove")) {
+		    	e.target.parentElement.style.display = "none";
+			}
+		});
 		var li = "";
 		for(i in list){
 			li += "<li class='list-group-item'>";
@@ -24,6 +29,7 @@ var banking = {
 			li += "<button type='button' class='btn btn-primary' onclick='helper.addDeposit(deposit"+i+", "+i+")' id='addDeposit'>DEPOSIT</button>";
 			li += "<input type='number' class='form-control' placeholder='WITHDRAW' id='withdraw"+i+"'/>";
 			li += "<button type='button' class='btn btn-primary' onclick='helper.withdraw(withdraw"+i+", "+i+")' id='withdraw'>WITHDRAW</button>";
+			li += "<span class='glyphicon glyphicon-remove pull-right' aria-hidden='true'></span>";
 			li += "</li>";
 		}
 		ul.innerHTML = li;
@@ -39,7 +45,9 @@ var helper = {
 		var accountType = document.getElementById('accountType').value;
 		var accountBal = document.getElementById('accountBal').value;
 		banking.addBankCustomer({name, accountType, accountBal});
-		name = "";
+		document.getElementById('name').value = "";
+		document.getElementById('accountType').value = "";
+		document.getElementById('accountBal').value = "";
 		banking.renderList(banking.bankCustomer);
 	},
 	filterLists: function(){
